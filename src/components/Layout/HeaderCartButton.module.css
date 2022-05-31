@@ -1,0 +1,50 @@
+.btn {
+    width: 25vw;
+    height: 8vh;
+    border-radius: 26px;
+    padding: 0 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    font-family: sans-serif;
+    background: rgb(238, 237, 237);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    animation: btn-load 500ms;
+}
+.btn p{
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+.btn p:nth-child(2){
+    font-weight: bold;
+    background: #c1b9b9;
+    width: 1.8rem;
+    padding: 5px;
+    text-align: center;
+    border-radius: 43%; 
+    justify-content: center;
+}
+@media screen and (min-width:425px) {
+
+    .btn {
+        width: 14vw;
+    }
+}
+
+@keyframes btn-load { 
+    0% {transform: scale(0.5);}
+    10% {transform: scale(0.9);}
+     
+    30% {transform: scale(1.1);}
+     
+    50% {transform: scale(1.15);}
+     
+    100% {transform: scale(1);}
+}
+
+.btn:hover {
+    background: #cfcccc;
+}

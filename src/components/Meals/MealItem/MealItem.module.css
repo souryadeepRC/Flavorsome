@@ -1,0 +1,40 @@
+.meal__item{
+    border-bottom: 1px solid grey;
+    padding: 0.5rem 1rem;
+    margin: 0.5rem 0;
+    box-shadow: inset 5px 1px 11px 0px #80808073;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 8px;
+} 
+.meal__name{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.meal__title{
+    margin: 0;
+}
+.meal__type{
+    margin: 0;
+    font-size: 14px;
+}
+.meal__division{
+    margin: 0;
+    width: 10px;
+    border-radius: 40%;
+    margin-left: 8px;
+    height: 10px;
+}
+.veg_item{
+    background: darkgreen;
+}
+.nonveg_item{
+    background: #8b3535;
+}
+.meal__price{
+    margin: 0;
+    font-size: 16px;
+    font-style: italic;
+    font-family: tahoma;
+}
