@@ -1,6 +1,5 @@
 import { Fragment, useState } from 'react'
-import appbanner from '../../assets/App_Banner.jpg' 
-import Meals from '../Meals/Meals'
+import appbanner from '../../assets/App_Banner.jpg'  
 import classes from './Header.module.css'
 import HeaderCartButton from './HeaderCartButton'
 const Header = () => {
@@ -25,7 +24,6 @@ const Header = () => {
             <div className={classes['main_image']}>
                 <img src={appbanner} alt="A Table full of delicious meal" />
             </div>
-            <Meals />
         </Fragment>
     )
 }

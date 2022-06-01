@@ -1,4 +1,10 @@
 .meal_list{
     list-style-type: none;
-    padding: 0 2rem;
+    padding: 0 0.5rem;
 } 
+
+@media screen and (min-width:450px){
+    .meal_list{
+        padding: 0 2rem;
+    }
+}
