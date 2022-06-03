@@ -12,6 +12,7 @@
     background: #7e2222;
     color: white;
     font-weight: bold;
+    cursor: pointer;
 }
 @media screen and (min-width:450px) {
     .item_quantity__box {
@@ -22,4 +23,32 @@
         align-items: stretch;
     }
 
+}
+
+
+.item__quantity{
+    display: flex;
+    align-items: center;
+    width: 15vw;
+    justify-content: space-around;
+    border: 1px solid #c9c4c4;
+}
+.item__quantity button{
+    background: none;
+    border: none;
+    font-size: 25px;
+    padding: 0;
+    cursor: pointer;
+}
+.item__quantity p{
+    margin: 0;
+}
+.item__quantity__remove{
+    color: #a9a4a4;
+}
+.item__quantity__add{
+    color: #34a934;
+}
+.item__quantity button:hover{
+    transform: scale(1.15);
 }

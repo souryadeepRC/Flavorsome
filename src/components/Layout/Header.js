@@ -1,14 +1,8 @@
-import { Fragment, useState } from 'react'
+import { Fragment } from 'react'
 import appbanner from '../../assets/App_Banner.jpg'  
 import classes from './Header.module.css'
 import HeaderCartButton from './HeaderCartButton'
-const Header = () => {
-    const [cartItemCount, setCartItemCount] = useState(0)
-    const addItemHandler = () => {
-        setCartItemCount((itemCount) => {
-            return itemCount+1
-        })
-    }
+const Header = props => {   
     return (
         <Fragment>
             <header className={classes.header}>
@@ -17,8 +11,7 @@ const Header = () => {
                         <h1>Flavoursome</h1>
                         <h6>An oasis of deliciousness</h6>
                     </div>
-                    <button onClick={addItemHandler}>Add Item</button>
-                    <HeaderCartButton itemCount={cartItemCount} onBtnClick={() => console.log('Btn Clicked')} />
+                    <HeaderCartButton itemCount={props.cartItemCount} onBtnClick={props.onCartClick} />
                 </div>
             </header>
             <div className={classes['main_image']}>

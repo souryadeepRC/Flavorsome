@@ -14,30 +14,3 @@
     left: 15%;
     background: white;
 }
-.modal__content{
-    padding: 0 2rem 2rem;
-    overflow-y: scroll;
-    height: 65vh;
-}
-
-.cart_detail{
-    padding: 0;
-    margin: 0;
-}
-
-.cart_amount{
-
-}
-.cart_amount ul{
-    margin: 0;
-    padding: 0;
-}
-.cart_amount ul li{
-    display: flex;
-    justify-content: space-between;
-    font-family: Tahoma;
-    font-size: 10px;
-}
-.cart_amount ul li h3,h5{
-    margin: 0;
-}

@@ -2,6 +2,17 @@
 import classes from './MealItem.module.css'
 import MealItemForm from './MealItemForm'
 const MealItem = props => {
+    const addItemToCartHandler = (itemCount) => { 
+        const quantity = parseInt(itemCount)
+        props.onAddItemToCart({
+            'Item_Id' : props.meal.Id,
+            'Title' : props.meal.Title,
+            'Type': props.meal.Type,
+            'Quantity' : quantity,
+            'Item_Price' : props.meal.Price,
+            'Price' : quantity * props.meal.Price
+        });
+    }
     return (
         <li className={classes.meal__item}>
             <div className={classes.meal__item_quantity}>
@@ -13,7 +24,7 @@ const MealItem = props => {
                 <p className={classes.meal__type}>{props.meal.Type}</p>
                 <p className={classes.meal__price}><b>Rs. </b>{props.meal.Price.toFixed(2)}</p>
             </div>  
-            <MealItemForm /> 
+            <MealItemForm quantity={props.quantity} onAddItemToCart={addItemToCartHandler}/> 
         </li>
     )
 }

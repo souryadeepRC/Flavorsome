@@ -41,9 +41,18 @@ const DUMMY_MEALS = [
         'Price' : 250
     }
 ]
-const AvailableMeals = () => {
-    console.log(DUMMY_MEALS);
-    const mealList = DUMMY_MEALS.map((meal) => <MealItem key={meal.Id} meal={meal} />)
+
+const AvailableMeals = props => {
+    const addItemToCartHandler = (itemDetail) => {
+        props.onAddItemToCart(itemDetail);
+    } 
+    const mealList = DUMMY_MEALS.map((meal) => {
+        const itemQuantityData = props.itemList.filter(item => item.Item_Id === meal.Id)
+        const quantity = itemQuantityData.length === 0 ? 0 : itemQuantityData[0].Quantity
+        //console.log(quantity);
+        return <MealItem key={meal.Id} meal={meal} quantity={quantity} 
+            onAddItemToCart={addItemToCartHandler}/>
+        })
     return (
         <Card><ul className={classes.meal_list}>{mealList}</ul></Card>
     )

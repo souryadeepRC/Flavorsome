@@ -46,11 +46,8 @@
     justify-content: space-evenly;
 }
 .item_remove__btn{
-    padding: 0.5vw 1vw;
     border: none;
-    background: #5f1a1a;
-    color: white;
-    border-radius: 6px;
+    background: transparent;
     cursor: pointer;
 }
 .item_remove__btn:hover{

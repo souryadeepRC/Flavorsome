@@ -1,28 +1,36 @@
 
-import { useState } from 'react'
-import InputElement from '../../UI/InputElement'
+import { useEffect, useState } from 'react' 
 import classes from './MealItemForm.module.css'
-const MealItemForm = () => {
-    const [itemCount,setItemCount] = useState(1)
-    const updateItemHandler = (value) => {
-        setItemCount(value)
-    }
+const MealItemForm = props => {
+    const [itemCount, setItemCount] = useState(props.quantity)
+ 
+    useEffect(() => {
+        setItemCount(props.quantity)
+    },[props.quantity])
+    
      
+    const removeItemHandler = () => {
+        setItemCount(itemCount => itemCount - 1)
+        props.onAddItemToCart(itemCount -1)
+    }
+    const addItemHandler = () => {
+        setItemCount(itemCount => itemCount + 1) 
+        props.onAddItemToCart(itemCount+1)
+    }
+ 
     return (
-        <form className={classes.item_quantity__box}>
-
-            <InputElement 
-                input={{
-                    'id':"Quantity",
-                    'type': 'number',
-                    'value': itemCount,
-                    'min': '1',
-                    'step': '1'
-                }}
-                onItemUpdate={updateItemHandler}
-            />
-            <button type="submit" className={classes.item_quantity__button}>+Add</button>
-        </form>
+        <div className={classes.item_quantity__box}>
+            {
+                itemCount === 0 
+                ? <button className={classes.item_quantity__button}
+                        onClick={addItemHandler} >+Add</button>
+                :   <div className={classes.item__quantity}>
+                        <button className={classes.item__quantity__remove}  onClick={removeItemHandler}>-</button>
+                        <p>{itemCount}</p>
+                        <button className={classes.item__quantity__add} onClick={addItemHandler} >+</button>
+                    </div>  
+            } 
+        </div>
     )
 }
 
