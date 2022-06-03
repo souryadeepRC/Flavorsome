@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/Flavorsome/static/css/main.073c9b0a.css",
-    "main.js": "/Flavorsome/static/js/main.5b433aaf.js",
+    "main.css": "/Flavorsome/static/css/main.f979cd9b.css",
+    "main.js": "/Flavorsome/static/js/main.0a5dcb5f.js",
     "static/js/787.389c554b.chunk.js": "/Flavorsome/static/js/787.389c554b.chunk.js",
-    "static/media/logo.svg": "/Flavorsome/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "static/media/App_Banner.jpg": "/Flavorsome/static/media/App_Banner.9784bc0a2b335a0ecd6a.jpg",
     "index.html": "/Flavorsome/index.html",
-    "main.073c9b0a.css.map": "/Flavorsome/static/css/main.073c9b0a.css.map",
-    "main.5b433aaf.js.map": "/Flavorsome/static/js/main.5b433aaf.js.map",
+    "main.f979cd9b.css.map": "/Flavorsome/static/css/main.f979cd9b.css.map",
+    "main.0a5dcb5f.js.map": "/Flavorsome/static/js/main.0a5dcb5f.js.map",
     "787.389c554b.chunk.js.map": "/Flavorsome/static/js/787.389c554b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.073c9b0a.css",
-    "static/js/main.5b433aaf.js"
+    "static/css/main.f979cd9b.css",
+    "static/js/main.0a5dcb5f.js"
   ]
 }
