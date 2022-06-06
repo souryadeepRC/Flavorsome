@@ -1,14 +1,24 @@
 .cart__content{
     padding: 0 2rem 2rem;
-    overflow-y: scroll;
-    height: 65vh;
 }
 
 .cart_detail{
     padding: 0;
     margin: 0;
+    overflow-y: scroll;
+    height: 30vh;
 }
-
+::-webkit-scrollbar{
+    width: 5px;
+}
+::-webkit-scrollbar-track{
+    background: #7620204d;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb{
+    background: #0807074d;
+    border-radius: 10px;
+}
 .cart_amount{
     margin: 0;
     padding: 0;

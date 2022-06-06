@@ -11,7 +11,7 @@ const Header = props => {
                         <h1>Flavoursome</h1>
                         <h6>An oasis of deliciousness</h6>
                     </div>
-                    <HeaderCartButton itemCount={props.cartItemCount} onBtnClick={props.onCartClick} />
+                    <HeaderCartButton onBtnClick={props.onCartClick} />
                 </div>
             </header>
             <div className={classes['main_image']}>

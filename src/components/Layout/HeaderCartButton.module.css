@@ -11,6 +11,8 @@
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+}
+.btn__animation{
     animation: btn-load 500ms;
 }
 .btn p{
