@@ -1,54 +1,55 @@
+import React from 'react'
 import Card from "../UI/Card";
 import MealItem from "./MealItem/MealItem";
 import classes from './AvailableMeals.module.css'
 
 const DUMMY_MEALS = [
     {
-        'Id': 1,
+        'Item_Id': 1,
         'Title': 'Butter Naan',
         'Type': 'Bread',
         'Is_Veg': true,
-        'Price': 30
+        'Item_Price': 30
     }, {
-        'Id': 2,
+        'Item_Id': 2,
         'Title': 'Masala Kulcha',
         'Type': 'Bread',
         'Is_Veg': true,
-        'Price': 45
+        'Item_Price': 45
     }, {
-        'Id': 3,
+        'Item_Id': 3,
         'Title': 'Panner Tikka Masala',
         'Type': 'Gravvy',
         'Is_Veg': true,
-        'Price': 190
+        'Item_Price': 190
     }, {
-        'Id': 4,
+        'Item_Id': 4,
         'Title': 'Chicken Ressala',
         'Type': 'Gravvy',
         'Is_Veg': false,
-        'Price': 200
+        'Item_Price': 200
     }, {
-        'Id': 5,
+        'Item_Id': 5,
         'Title': 'Normal Fried Rice',
         'Type': 'Rice',
         'Is_Veg': true,
-        'Price': 120
+        'Item_Price': 120
     }, {
-        'Id': 6,
+        'Item_Id': 6,
         'Title': 'Chicken Manchurian',
         'Type': 'Gravvy',
         'Is_Veg': false,
-        'Price': 250
+        'Item_Price': 250
     }
 ]
 
-const AvailableMeals = props => {
+const AvailableMeals = () => {
 
     const mealList = DUMMY_MEALS.map((meal) => {
-        return <MealItem key={meal.Id} meal={meal} />
+        return <MealItem key={meal.Item_Id} meal={meal} />
     })
     return (
         <Card><ul className={classes.meal_list}>{mealList}</ul></Card>
     )
 }
-export default AvailableMeals
+export default React.memo(AvailableMeals)

@@ -6,20 +6,21 @@ const defaultCartState = {
     items: [],
     totalAmount: 0
 }
-const addItemToCart = (exitingItems, existingTotalAmount, addedItem) => {
+const addItemToCart = (exitingItems, existingTotalAmount, addedItem) => { 
     return {
         items: exitingItems.concat({
             'Id': exitingItems.length + 1,
-            ...addedItem
+            ...addedItem,
+            'Quantity' : 1,
+            'Price' : 1 * addedItem.Item_Price
         }),
-        totalAmount: existingTotalAmount + addedItem.Price
+        totalAmount: existingTotalAmount + addedItem.Item_Price
     }
 }
 const increaseItemInCart = (exitingItems, existingTotalAmount, itemPosition) => {
     
     const updatedItems = [...exitingItems]
     const modifiedItem = updatedItems[itemPosition]
- 
     modifiedItem.Quantity++
     modifiedItem.Price = modifiedItem.Quantity * modifiedItem.Item_Price
     updatedItems[itemPosition] = modifiedItem

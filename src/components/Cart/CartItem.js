@@ -4,7 +4,6 @@ import CartContext from '../../store/Cart-context'
 import DeleteIcon from '../Icon/DeleteIcon'
 import classes from './CartItem.module.css'
 const CartItem = props => { 
-    
     const cartCtx = useContext(CartContext)
     const increaseItemHandler = () => {
         cartCtx.modifyItem('INCREASE',props.data.Item_Id)

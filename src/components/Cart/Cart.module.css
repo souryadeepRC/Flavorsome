@@ -5,8 +5,8 @@
 .cart_detail{
     padding: 0;
     margin: 0;
-    overflow-y: scroll;
-    height: 30vh;
+    overflow-y: auto;
+    max-height: 30vh;
 }
 ::-webkit-scrollbar{
     width: 5px;
